@@ -1,6 +1,6 @@
 # NoJUnit
 
-A simple alternative to JUnit for testing Java code in the client class.
+A simple alternative to JUnit for testing Java code in the client class. The inspiration for the name comes from NoSQL.
 
 ## Preface
 
@@ -23,13 +23,13 @@ For example, `NoJUnit.setupTest("This is my first set of tests", 60);` would pri
 
     This is my first set of tests
     ============================================================
-    
+
 Now that you have properly setup a group of tests, you can actually test something! Use `NoJUnit.test(boolean foo, String message)` to list out each test. The first parameter is the result of the test and the second is the title or descriptor of what you are testing. Below are a few examples.
 
     NoJUnit.test("foo".equals("foo"),"Does foo = foo?");
     NoJUnit.test(8.5==8.5,"Testing floating point numbers");
     NoJUnit.test(8==9,"Does 8 equal 9?");
-    
+
 Lastly, to display the results of the tests, simply call `NoJUnit.results();`. Below is the full output of everything we have written so far.
 
     This is my first set of tests
@@ -44,7 +44,7 @@ Lastly, to display the results of the tests, simply call `NoJUnit.results();`. B
     Pass Percentage: 66.67%
     [ ] Passed All Tests
     ------------------------------------------------------------
-    
+
 ### Other useful bits
 
 #### Debugging
