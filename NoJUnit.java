@@ -90,14 +90,16 @@ public class NoJUnit {
     }
 
     // output the results, including total tests, tests completed, and percentage completed
-    public static void results()
+    // will return a boolean based on whether all the tests passed or not
+    public static boolean results()
     {
+        boolean passedAll;
         if (counter == 0)
         {
             System.out.println("\n\n" + title + "\n" + doubleLine);
             alert("No tests were run, try again");
             System.out.println(doubleLine);
-            return;
+            return false;
         }
         System.out.println("\n" + line);
         System.out.println("NoJUnit Results");
@@ -109,15 +111,18 @@ public class NoJUnit {
         if (percent >= 100)
         {
             System.out.println("[x] Passed All Tests");
+            passedAll = true;
         }
         else
         {
             System.out.println("[ ] Passed All Tests");
+            passedAll = false;
         }
         System.out.println(line);
         // reset values
         counter = 0; total = 0; percent = 0.0; title = ""; showDebug = false;
         doubleLine = "==============================";
         line = "------------------------------";
+        return passedAll;
     }
 }

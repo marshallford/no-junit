@@ -53,6 +53,10 @@ If you would like additional info on what NoJUnit is doing, when setting up a gr
 
     setupTest(String newTitle, int newLineLength, boolean debug)
 
+#### Results method returns a boolean
+
+The results method now returns a boolean based on whether or not all the tests were passed. I am not sure why this would be useful, but nonetheless I added it.
+
 #### Changing the line length
 
 If for whatever reason you would like to change the line separator length of the results section, use `lineLength(int newLineLength)` before calling `NoJUnit.results();`.
